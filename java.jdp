@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'mkdir karthik' 
+                sh 'mkdir lokesh' 
             }
         }
         stage('Test') { 
             steps {
-                echo 'hello myself rupam dhote' 
+                echo 'hello myself rupam' 
             }
         }
         stage('Deploy') { 

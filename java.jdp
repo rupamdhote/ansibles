@@ -1,0 +1,20 @@
+pipeline {
+    agent {label 'label-1'} 
+    stages {
+        stage('Build') { 
+            steps {
+                sh 'mkdir karthik' 
+            }
+        }
+        stage('Test') { 
+            steps {
+                echo 'hello myself rupam dhote' 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                git credentialsId: '45bed885-6afb-4549-842e-8759df1244b4', url: 'git@github.com:rupamdhote/ansibles.git' 
+            }
+        }
+    }
+}

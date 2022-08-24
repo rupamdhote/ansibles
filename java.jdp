@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                git credentialsId: '45bed885-6afb-4549-842e-8759df1244b4', url: 'git@github.com:rupamdhote/ansibles.git' 
+                sh'git clone git@github.com:rupamdhote/ansibles.git' 
             }
         }
     }
